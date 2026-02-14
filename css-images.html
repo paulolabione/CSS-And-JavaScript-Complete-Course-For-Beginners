@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Images</title>
+</head>
+<body>
+  <img style="border: 3px dotted red; width: 300px; height: 150px;" src="images/Bad Seller.jpg">
+  <!-- <img src="https://picsum.photos/400/300?random=${Math.random() * 10000}"> -->
+   <div style="width: 300px; height: 150px; display: inline-block;" id="mydiv">
+    </div>
+   <div style="width: 300px; height: 150px; display: inline-block;" id="mydiv2">
+   </div>
+</body>
+<script>
+  const out = document.getElementById('mydiv');
+  const out2 = document.getElementById('mydiv2');
+
+  out.style.backgroundImage += "url('https://picsum.photos/300/150')";
+  out2.style.backgroundImage += `url('https://picsum.photos/300/150?random=${Math.floor(Math.random() * 10000)})`;
+</script>
+
+</html>
