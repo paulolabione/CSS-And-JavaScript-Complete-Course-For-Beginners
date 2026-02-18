@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Functions</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+  <p>Click the following button to call the function</p>
+  <!-- <form>
+    <input type="button" onclick="sayHello()" value="Say Hello">
+  </form>
+
+  <script>
+    const out = document.getElementById('output');
+
+    function sayHello() {
+      out.innerHTML += `Hello There!<br>`;
+    }
+  </script> -->
+
+  <form>
+    <input name="t1" placeholder="Enter Name"> <br>
+    <input name="t2" placeholder="Enter Age"> <br><br>
+    <input type="button" onclick="sayHello(t1.value, t2.value)" value="Say Hello!">
+  </form>
+
+  <script>
+    const out = document.getElementById('output');
+
+    function sayHello(name, age) {
+      if (name== '' || age == '') {
+        // return;
+        alert('Please enter your name and/or age!!!');
+      }
+      out.innerHTML += `Hello ${name} your age is ${age} years old.<br>`;
+
+    }
+  </script>
+
+</body>
+</html>

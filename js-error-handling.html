@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> JS Error Handling</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <p>Click the following to see the result :</p>
+  <form>
+    <input type="button" value="Click Me" onclick="myFunction()">
+  </form>
+
+  <script>
+    const out = document.getElementById('output');
+
+    let a = "test";
+
+    function myFunction() {
+      try {
+      let s = a.toUpperCase();
+      alert('Value of a variable is : ' + a);
+    }
+    catch (e) {
+      alert('Error');
+    }
+    finally {
+      alert('Finally block will always execute!');
+    }
+    }
+  </script>
+  
+</body>
+</html>

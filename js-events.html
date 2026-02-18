@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Events</title>
+</head>
+<body>
+
+  
+  <body onload= 'load()'>
+    <img name="img1" onmouseover="mouseOver()" onmouseout="mouseOut()">
+  </body>
+
+  <script>
+    function mouseOver() {
+      document.images['img1'].src = 'images/Bad Seller.jpg';
+    }
+
+    function mouseOut() {
+      document.images['img1'].src = 'images/Red Face.jpg';
+    }
+
+    function load() {
+      document.images['img1'].src = 'images/Red Face.jpg';
+    }
+  </script>
+  
+</body>
+</html>

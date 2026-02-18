@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Do While Loop</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+
+    const out = document.getElementById('output');
+
+    let actualPin = '3456';
+    let pin;
+    let count = 0;
+
+    do {
+      pin = prompt('Enter you pin...', 'Enter...');
+      count++;
+    } while (pin !== actualPin && count < 3);
+    
+    if (pin === actualPin) {
+      out.innerHTML += `Welcome User<br>`;
+    } else {
+      out.innerHTML += `Account Locked<br>`;
+    }
+  </script>
+  
+</body>
+</html>

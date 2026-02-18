@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"  content="This site is about cookies in JavaScript">
+    <title>JS Cookies</title>
+
+    <script>
+      function WriteCookie() {
+        if (document.myform.customer.value == "") {
+          alert('Enter some value');
+          return;
+        }
+        let cookieValue = encodeURIComponent(document.myform.customer.value) + ";";
+        document.cookie = "name=" + cookieValue + "; path=/";
+        document.write('Setting cookies : ' + 'name = ' + cookieValue);
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <form name="myform" action="">
+      Enter name: <input type="text" name="customer">
+      <input type="button" value="set cookie" onclick="WriteCookie();">
+    </form>
+ 
+  </body>
+</html>
