@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS While Loop</title>
+</head>
+<body>
+
+  <div id="output"></div>
+  
+  <script>
+
+    const out = document.getElementById('output');
+
+    let num = parseInt(prompt('Enter the number', 'Enter...'));
+    let count = 0;
+
+    while (num > 0) {
+      num = Math.trunc(num / 10);
+      count++;
+    }
+
+    out.innerHTML += `Digits : ${count}<br>`;
+
+  </script>
+
+  
+</body>
+</html>

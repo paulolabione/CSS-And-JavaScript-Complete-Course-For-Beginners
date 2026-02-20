@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Objects</title>
+</head>
+<body>
+
+  <div id="output"></div>
+
+  <script>
+    const out = document.getElementById('output');
+
+    let tutorial = {
+      'topic': 'JavaScript', 
+      'trainer': 'vivek',
+      'mode': 'online'
+    }
+
+    out.innerHTML += `Topic : ${tutorial.topic}<br>`;
+    out.innerHTML += `Trainer : ${tutorial.trainer}<br>`;
+    out.innerHTML += `Mode : ${tutorial.mode}<br>`;
+
+    let txt = '';
+    let x;
+
+    for (x in tutorial) {
+      txt += tutorial[x] + ', ';
+    }
+    out.innerHTML += `<br>${txt}`;
+
+
+  </script>
+
+  
+</body>
+</html>

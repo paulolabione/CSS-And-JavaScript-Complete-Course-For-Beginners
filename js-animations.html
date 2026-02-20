@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Animations</title>
+</head>
+<body>
+
+  <img src="images/Bad Seller.jpg" name="img1" onmouseover="stop()" onmouseout="start()">
+
+  <script>
+    let arr = ['images/Bad Seller.jpg', 'images/Red Face.jpg', 'images/seeds.jpg', 'images/Shorts.jpg'];
+    let i = 1;
+    let ref;
+    let running = true;
+    let started = false;
+
+
+
+    function picLibrary() {
+      if (!running) {
+        return
+      } 
+        document.images[0].src = arr[i];  // We also can use 'img1' remember 0 correspond to the first image 
+          i++;                              // and in this case is img1.
+          if (i > 3) {
+            i = 0;
+      }  
+    }
+
+    function start() {
+      // ref = setInterval('picLibrary()', 1000);
+      running = true
+          if (!started) {
+      setInterval(picLibrary, 1000);
+      started = true;
+    }
+    }
+
+    function stop() {
+      // clearInterval(ref);
+      running = false
+    }
+  </script>
+
+</body>
+</html>

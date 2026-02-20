@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Switch Statements</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+
+    const out = document.getElementById('output');
+
+    let ch = prompt('Enter a character', 'Enter...');
+
+    // switch(ch) {
+    //   case 'a':
+    //     out.innerHTML += `A is vowel`;
+    //     break;
+
+    //   case 'e':
+    //     out.innerHTML += `E is vowel`;
+    //     break;
+
+    //   case 'i':
+    //     out.innerHTML += `I is vowel`;
+    //     break;
+
+    //   case 'o':
+    //     out.innerHTML += `O is vowel`;
+    //     break;
+
+    //   case 'u':
+    //     out.innerHTML += `U is vowel`;
+    //     break;
+
+    //   default:
+    //     out.innerHTML += `Special character/consonant`;
+    //     break;
+    // }
+
+    switch(ch) {
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+        out.innerHTML += `${ch.toUpperCase()} is vowel`;
+        break;
+        default:
+          out.innerHTML += `${ch.toUpperCase()}- Special character or consonante`;
+    }
+  </script>
+  
+</body>
+</html>
